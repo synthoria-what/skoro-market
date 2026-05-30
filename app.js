@@ -10,7 +10,7 @@ const SITE = {
   session: "skoromarket_static_user",
   heroImage: "assets/dj-milk.webp",
   search: "Найти продукт",
-  promos: [["15 мин", "быстрая доставка"], ["Свежие", "товары на каждый день"], ["База", "IndexedDB в браузере"]],
+  promos: [["15 мин", "быстрая доставка"], ["Свежие", "товары на каждый день"]],
 };
 
 const INITIAL_PRODUCTS = [
