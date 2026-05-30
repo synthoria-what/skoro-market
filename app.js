@@ -1,33 +1,35 @@
 const SITE = {
-  title: "SkoroMarket",
+  title: "СкороМаркет",
   subtitle: "продукты у дома",
   mark: "S",
-  hero: "Продуктовая доставка с локальной базой в браузере",
-  copy: "Каталог продуктов, регистрация, корзина и админ-панель работают без сервера. Данные сохраняются в IndexedDB этого браузера.",
+  catalogVersion: "ru-products-v1",
+  hero: "Готовые наборы",
+  heroAccent: "и продукты",
+  copy: "Соберите корзину для быстрого обеда или ужина: свежие продукты, лапша, овощи и напитки уже в каталоге.",
   cta: "Собрать корзину",
   db: "skoromarket_static_db",
   cart: "skoromarket_static_cart",
   session: "skoromarket_static_user",
-  heroImage: "assets/dj-milk.webp",
+  heroImage: "assets/hero-noodles.jpg",
   search: "Найти продукт",
-  promos: [["15 мин", "быстрая доставка"], ["Свежие", "товары на каждый день"]],
+  promos: [["15 мин", "быстрая доставка"], ["от 109 ₽", "товары на каждый день"], ["Самовывоз", "или доставка домой"]],
 };
 
 const INITIAL_PRODUCTS = [
-  { id: "milk", name: "Milk", category: "Молочное", price: 109, old_price: 139, image: "assets/dj-milk.webp", badge: "15 мин", description: "Молоко в упаковке, карточка товара с реальным фото продукта." },
-  { id: "eggs", name: "Eggs", category: "Бакалея", price: 139, old_price: 169, image: "assets/dj-eggs.webp", badge: "Выгодно", description: "Упаковка яиц для завтраков и домашней выпечки." },
-  { id: "apple", name: "Apple", category: "Фрукты", price: 69, old_price: 89, image: "assets/dj-apple.webp", badge: "Свежие", description: "Сочное яблоко, товарная карточка для фруктовой полки." },
-  { id: "strawberry", name: "Strawberry", category: "Фрукты", price: 249, old_price: 299, image: "assets/dj-strawberry.webp", badge: "Сезон", description: "Клубника для десертов, завтраков и перекусов." },
-  { id: "kiwi", name: "Kiwi", category: "Фрукты", price: 129, old_price: 159, image: "assets/dj-kiwi.webp", badge: "Витамин", description: "Киви с ярким вкусом, подходит для смузи и фруктовых тарелок." },
-  { id: "cucumber", name: "Cucumber", category: "Овощи", price: 89, old_price: 119, image: "assets/dj-cucumber.webp", badge: "Хруст", description: "Огурец для салатов, сэндвичей и легких закусок." },
-  { id: "green-bell-pepper", name: "Green Bell Pepper", category: "Овощи", price: 119, old_price: 149, image: "assets/dj-green-pepper.webp", badge: "Эко", description: "Зеленый болгарский перец для салатов и горячих блюд." },
-  { id: "potatoes", name: "Potatoes", category: "Овощи", price: 99, old_price: 129, image: "assets/dj-potatoes.webp", badge: "Запас", description: "Картофель для гарниров, супов и запекания." },
-  { id: "rice", name: "Rice", category: "Бакалея", price: 159, old_price: 199, image: "assets/dj-rice.webp", badge: "Домой", description: "Рис в упаковке для гарниров и домашних блюд." },
-  { id: "cooking-oil", name: "Cooking Oil", category: "Бакалея", price: 189, old_price: 229, image: "assets/dj-cooking-oil.webp", badge: "Кухня", description: "Растительное масло для жарки, салатов и выпечки." },
-  { id: "honey-jar", name: "Honey Jar", category: "Бакалея", price: 279, old_price: 349, image: "assets/dj-honey.webp", badge: "Сладко", description: "Банка меда к чаю, каше или десертам." },
-  { id: "nescafe-coffee", name: "Nescafe Coffee", category: "Напитки", price: 399, old_price: 499, image: "assets/dj-coffee.webp", badge: "2 по цене 1", description: "Растворимый кофе Nescafe в фирменной упаковке." },
-  { id: "juice", name: "Juice", category: "Напитки", price: 169, old_price: 209, image: "assets/dj-juice.webp", badge: "Витамин", description: "Сок в упаковке для завтрака и перекуса." },
-  { id: "water", name: "Water", category: "Напитки", price: 69, old_price: 89, image: "assets/dj-water.webp", badge: "Холодная", description: "Питьевая вода в бутылке для ежедневного заказа." },
+  { id: "milk", name: "Молоко", category: "Молочное", price: 109, old_price: 139, image: "assets/dj-milk.webp", badge: "15 мин", description: "Молоко в упаковке, карточка товара с реальным фото продукта." },
+  { id: "eggs", name: "Яйца", category: "Бакалея", price: 139, old_price: 169, image: "assets/dj-eggs.webp", badge: "Выгодно", description: "Упаковка яиц для завтраков и домашней выпечки." },
+  { id: "apple", name: "Яблоко", category: "Фрукты", price: 69, old_price: 89, image: "assets/dj-apple.webp", badge: "Свежие", description: "Сочное яблоко, товарная карточка для фруктовой полки." },
+  { id: "strawberry", name: "Клубника", category: "Фрукты", price: 249, old_price: 299, image: "assets/dj-strawberry.webp", badge: "Сезон", description: "Клубника для десертов, завтраков и перекусов." },
+  { id: "kiwi", name: "Киви", category: "Фрукты", price: 129, old_price: 159, image: "assets/dj-kiwi.webp", badge: "Витамин", description: "Киви с ярким вкусом, подходит для смузи и фруктовых тарелок." },
+  { id: "cucumber", name: "Огурец", category: "Овощи", price: 89, old_price: 119, image: "assets/dj-cucumber.webp", badge: "Хруст", description: "Огурец для салатов, сэндвичей и легких закусок." },
+  { id: "green-bell-pepper", name: "Болгарский перец", category: "Овощи", price: 119, old_price: 149, image: "assets/dj-green-pepper.webp", badge: "Эко", description: "Зеленый болгарский перец для салатов и горячих блюд." },
+  { id: "potatoes", name: "Картофель", category: "Овощи", price: 99, old_price: 129, image: "assets/dj-potatoes.webp", badge: "Запас", description: "Картофель для гарниров, супов и запекания." },
+  { id: "rice", name: "Рис", category: "Бакалея", price: 159, old_price: 199, image: "assets/dj-rice.webp", badge: "Домой", description: "Рис в упаковке для гарниров и домашних блюд." },
+  { id: "cooking-oil", name: "Растительное масло", category: "Бакалея", price: 189, old_price: 229, image: "assets/dj-cooking-oil.webp", badge: "Кухня", description: "Растительное масло для жарки, салатов и выпечки." },
+  { id: "honey-jar", name: "Мед", category: "Бакалея", price: 279, old_price: 349, image: "assets/dj-honey.webp", badge: "Сладко", description: "Банка меда к чаю, каше или десертам." },
+  { id: "nescafe-coffee", name: "Кофе Nescafe", category: "Напитки", price: 399, old_price: 499, image: "assets/dj-coffee.webp", badge: "2 по цене 1", description: "Растворимый кофе Nescafe в фирменной упаковке." },
+  { id: "juice", name: "Сок", category: "Напитки", price: 169, old_price: 209, image: "assets/dj-juice.webp", badge: "Витамин", description: "Сок в упаковке для завтрака и перекуса." },
+  { id: "water", name: "Вода", category: "Напитки", price: 69, old_price: 89, image: "assets/dj-water.webp", badge: "Холодная", description: "Питьевая вода в бутылке для ежедневного заказа." },
 ];
 
 let state = { products: [], category: "Все", query: "", cart: {}, user: null, delivery: "Доставка", authMode: "login", sort: "popular", editing: null };
@@ -114,8 +116,22 @@ async function storeDelete(name, key) {
 
 async function seedProducts() {
   const products = await storeAll("products");
-  if (products.length) return products;
+  const versionKey = `${SITE.db}:catalogVersion`;
+  if (products.length && localStorage.getItem(versionKey) === SITE.catalogVersion) return products;
+  const defaultsById = new Map(INITIAL_PRODUCTS.map((product) => [product.id, product]));
+  if (products.length) {
+    for (const product of products) {
+      const fresh = defaultsById.get(product.id);
+      if (fresh) await storePut("products", { ...product, name: fresh.name });
+    }
+    for (const product of INITIAL_PRODUCTS) {
+      if (!products.some((item) => item.id === product.id)) await storePut("products", product);
+    }
+    localStorage.setItem(versionKey, SITE.catalogVersion);
+    return await storeAll("products");
+  }
   for (const product of INITIAL_PRODUCTS) await storePut("products", product);
+  localStorage.setItem(versionKey, SITE.catalogVersion);
   return INITIAL_PRODUCTS;
 }
 
@@ -158,8 +174,16 @@ function render() {
         <div class="actions"><button id="adminOpen">Админ</button><button id="authOpen">${state.user ? state.user.name : "Войти"}</button><button id="cartFocus">Корзина <b>${count}</b></button></div>
       </header>
       <section class="hero">
-        <div><h1>${SITE.hero}</h1><p>${SITE.copy}</p><button id="scrollCatalog">${SITE.cta}</button></div>
-        <img src="${SITE.heroImage}" alt="${SITE.title}" />
+        <div class="hero-card">
+          <div class="hero-nav"><button type="button" id="scrollCatalogTop">←</button><div><button type="button">♡</button><button type="button">⋮</button></div></div>
+          <div class="hero-copy">
+            <h1>${SITE.hero}<span>${SITE.heroAccent}</span></h1>
+            <p>${SITE.copy}</p>
+            <div class="hero-meta"><span>Время: 15 мин</span><span>Итого от: 109 ₽</span></div>
+            <div class="hero-actions"><button id="scrollCatalog">${SITE.cta}</button><button type="button" id="cartFocusHero">+</button></div>
+          </div>
+          <img src="${SITE.heroImage}" alt="${SITE.title}" />
+        </div>
       </section>
       <section class="promo">${SITE.promos.map(([a, b]) => `<div><strong>${a}</strong><span>${b}</span></div>`).join("")}</section>
       <section class="layout" id="catalog">
@@ -224,7 +248,9 @@ function bindEvents() {
   document.querySelectorAll("[data-dec]").forEach((button) => button.addEventListener("click", () => setCart(button.dataset.dec, (state.cart[button.dataset.dec] || 0) - 1)));
   document.querySelectorAll("[data-delivery]").forEach((button) => button.addEventListener("click", () => { state.delivery = button.dataset.delivery; render(); }));
   document.querySelector("#scrollCatalog")?.addEventListener("click", () => document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" }));
+  document.querySelector("#scrollCatalogTop")?.addEventListener("click", () => document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" }));
   document.querySelector("#cartFocus")?.addEventListener("click", () => document.querySelector("#cart").scrollIntoView({ behavior: "smooth" }));
+  document.querySelector("#cartFocusHero")?.addEventListener("click", () => document.querySelector("#cart").scrollIntoView({ behavior: "smooth" }));
   document.querySelector("#authOpen")?.addEventListener("click", () => document.querySelector("#authModal").classList.add("open"));
   document.querySelector("#authClose")?.addEventListener("click", () => document.querySelector("#authModal").classList.remove("open"));
   document.querySelectorAll("[data-auth-mode]").forEach((button) => button.addEventListener("click", () => { state.authMode = button.dataset.authMode; render(); document.querySelector("#authModal").classList.add("open"); }));
